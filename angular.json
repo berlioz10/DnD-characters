@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "dnd-characters"
+    }
+  },
+  "defaultProject": "dnd-characters",
+  "cli": {
+    "analytics": "3438039f-0c5f-4fc3-b452-46d3578c0063"
+  }
 }

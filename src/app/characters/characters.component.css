@@ -1,0 +1,14 @@
+.characters_box {
+    padding: 25px;
+    border: 5px solid black;
+    width: 20%;
+}
+
+.characters_stats {
+    padding: 5px 5px 5px 5px;
+    margin: 5px;
+    border: 1px solid black;
+    font-size: large;
+    resize: horizontal;
+    text-align: right;
+}
