@@ -1,6 +1,6 @@
+import { CharactersService } from './../characters.service';
+import { Character } from './../character';
 import { Component, OnInit } from '@angular/core';
-
-import characters from './characters.json';
 
 @Component({
   selector: 'characters',
@@ -10,11 +10,18 @@ import characters from './characters.json';
 export class CharactersComponent implements OnInit {
 
   url = '';
-  items: any = characters;
+  characters: Character[];
 
-  constructor() {}
+  constructor(private CharactersService: CharactersService) {
+
+  }
 
   ngOnInit(): void {
+    this.getCharacters();
+  }
+
+  getCharacters(): void {
+    this.CharactersService.getCharacters().subscribe(characters => this.characters = characters);
   }
 
 }
