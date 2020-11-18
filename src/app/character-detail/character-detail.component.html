@@ -1,8 +1,20 @@
-<div *ngif="hero">
-    <p>Character details: </p>
-    <p>Name: {{character.name}}</p>
-    <p>Race: {{character.race}}</p>
-    <p>Weapon: {{character.weapon}}</p>
-    <p>Armor: {{character.armor}}</p>
-    <p>Spell: {{character.spell}}</p>
+<div *ngIf="character">
+    <h1>Character details: </h1>
+    <label for="input_name">name: </label>
+        <input id="input_name" [(ngModel)]="character.name" placeholder="name"/>
+    
+    <label for="input_race">race: </label>
+        <input id="input_race" [(ngModel)]="character.race" placeholder="name"/>
+    
+    <label for="input_weapon">weapon: </label>
+        <input id="input_weapon" [(ngModel)]="character.weapon" placeholder="name"/>
+    
+    <label for="input_armor">armor: </label>
+        <input id="input_armor" [(ngModel)]="character.armor" placeholder="name"/>
+    
+    <label for="input_spell">spell: </label>
+        <input  id="input_spell" [(ngModel)]="character.spell" placeholder="name"/>
+    <label for="input_back"> </label>
+    <button id="input_back" (click)="goBack()"> Inapoi </button>
+
 </div>

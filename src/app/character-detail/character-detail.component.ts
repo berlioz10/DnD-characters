@@ -1,6 +1,7 @@
 import { CharactersService } from './../characters.service';
 import { Character } from './../character';
 import { Component, OnInit, Input } from '@angular/core';
+import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -10,10 +11,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CharacterDetailComponent implements OnInit {
 
-  @Input() character: Character;
+  character: Character;
 
-  constructor(private CharactersService: CharactersService, 
-              private route: ActivatedRoute
+  constructor(private charactersService: CharactersService, 
+              private route: ActivatedRoute,
+              private location: Location
               ) { }
 
   ngOnInit(): void {
@@ -22,7 +24,10 @@ export class CharacterDetailComponent implements OnInit {
 
   getHero():void {
     const id = +this.route.snapshot.paramMap.get("id");
-    this.CharactersService.getCharacter(id).subscribe(character => this.character = character);
+    this.charactersService.getCharacter(id).subscribe(character => this.character = character);
   }
 
+  goBack(): void {
+    this.location.back();
+  }
 }
