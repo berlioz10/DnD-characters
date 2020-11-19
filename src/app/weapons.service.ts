@@ -1,0 +1,20 @@
+import { Observable, of } from 'rxjs';
+import { Weapons } from './mock-weapons';
+import { Injectable } from '@angular/core';
+import { Weapon } from './weapon';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class WeaponsService {
+
+  constructor() { }
+
+  getWeapons(): Observable<Weapon[]> {
+    return of(Weapons);
+  }
+  
+  getWeapon(id: number): Observable<Weapon> {
+    return of(Weapons.find(weapon => weapon.id === id));
+  }
+}

@@ -9,7 +9,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharactersComponent implements OnInit {
 
-  url = '';
   characters: Character[];
 
   constructor(private CharactersService: CharactersService) {

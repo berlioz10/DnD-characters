@@ -4,7 +4,7 @@
         <li class="characters_stats">id: {{character.id}}</li>
         <li class="characters_stats">Name: {{character.name}}</li>
         <li class="characters_stats">Race: {{character.race}}</li>
-        <li class="characters_stats">Weapon: {{character.weapon}}</li>
+        <li class="characters_stats">Weapon: <weapon [id]="character.id_weapon"></weapon></li>
         <li class="characters_stats">Armor: {{character.armor}}</li>
         <li class="characters_stats">Spell: {{character.spell}}</li>
         <button routerLink="/detail/{{character.id}}">Editeaza acest caracter</button>

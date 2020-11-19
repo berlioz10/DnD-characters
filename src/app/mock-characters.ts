@@ -1,11 +1,12 @@
 import { Character } from './character';
 
+
 export const Characters: Character[] = [
     {
         id: 1,
         name: "Ion",
         race: "Monke",
-        weapon: "bata",
+        id_weapon: 3,
         armor: "none",
         spell: "fireball"
     },
@@ -13,7 +14,7 @@ export const Characters: Character[] = [
         id: 2,
         name: "Mihai",
         race: "martian",
-        weapon: "pistol",
+        id_weapon: 0,
         armor: "none",
         spell: "slime ball"
     },
@@ -21,7 +22,7 @@ export const Characters: Character[] = [
         id: 3,
         name: "Cristi",
         race: "roman",
-        weapon: "cutit",
+        id_weapon: 2,
         armor: "platosa + 200",
         spell: "dau si fur"
     },
@@ -29,7 +30,7 @@ export const Characters: Character[] = [
         id: 4,
         name: "Gabriel",
         race: "Gabi Mircea",
-        weapon: "creier",
+        id_weapon: 1,
         armor: "none",
         spell: "over 9000"
     },
@@ -37,7 +38,7 @@ export const Characters: Character[] = [
         id: 5,
         name: "Dragos",
         race: "Elf",
-        weapon: "Arc",
+        id_weapon: 1,
         armor: "none",
         spell: "Vision"
     }

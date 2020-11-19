@@ -2,7 +2,7 @@ export interface Character {
     id: number;
     name: string;
     race: string;
-    weapon: string;
+    id_weapon: number;
     armor: string;
     spell: string;
 }
