@@ -1,4 +1,4 @@
-import { Weapon} from './weapon';
+import { Weapon} from '../interfaces/weapon';
 
 
 export const Weapons: Weapon[] = [
@@ -8,7 +8,8 @@ export const Weapons: Weapon[] = [
         damage: 10,
         ability_damage: 0,
         type: "Mircea",
-        resistance: 20
+        resistance: 20,
+        other: ""
     },
     {
         id: 2,
@@ -16,7 +17,8 @@ export const Weapons: Weapon[] = [
         damage: 6,
         ability_damage: 6,
         type: "All",
-        resistance: 20
+        resistance: 20,
+        other: ""
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ export const Weapons: Weapon[] = [
         damage: 10,
         ability_damage: 10,
         type: "All",
-        resistance: 10
+        resistance: 10,
+        other: ""
     },
     {
         id: 4,
@@ -32,6 +35,7 @@ export const Weapons: Weapon[] = [
         damage: 5,
         ability_damage: 3,
         type: "Mircea",
-        resistance: 30
+        resistance: 30,
+        other: ""
     }
 ]

@@ -1,5 +1,5 @@
 import { CharactersService } from './../characters.service';
-import { Character } from './../character';
+import { Character } from '../interfaces/character';
 import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';

@@ -5,4 +5,5 @@ export interface Weapon {
     ability_damage: number;
     type: string;
     resistance: number;
+    other: string;
 }

@@ -1,4 +1,4 @@
-import { Character } from './character';
+import { Character } from '../interfaces/character';
 
 
 export const Characters: Character[] = [
@@ -7,39 +7,39 @@ export const Characters: Character[] = [
         name: "Ion",
         race: "Monke",
         id_weapon: 3,
-        armor: "none",
-        spell: "fireball"
+        armor: 0,
+        spell: [1]
     },
     {
         id: 2,
         name: "Mihai",
         race: "martian",
         id_weapon: 0,
-        armor: "none",
-        spell: "slime ball"
+        armor: 0,
+        spell: [2]
     },
     {
         id: 3,
         name: "Cristi",
         race: "roman",
         id_weapon: 2,
-        armor: "platosa + 200",
-        spell: "dau si fur"
+        armor: 1,
+        spell: [4]
     },
     {
         id: 4,
         name: "Gabriel",
         race: "Gabi Mircea",
         id_weapon: 1,
-        armor: "none",
-        spell: "over 9000"
+        armor: 0,
+        spell: []
     },
     {
         id: 5,
         name: "Dragos",
         race: "Elf",
         id_weapon: 1,
-        armor: "none",
-        spell: "Vision"
+        armor: 2,
+        spell: [1,2]
     }
 ]

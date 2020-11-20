@@ -3,6 +3,6 @@ export interface Character {
     name: string;
     race: string;
     id_weapon: number;
-    armor: string;
-    spell: string;
+    armor: number;
+    spell: number[];
 }
