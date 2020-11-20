@@ -1,5 +1,5 @@
 import { Spells } from './../mocks-lists/mock-spells';
-import { Spell } from './../interfaces/spell';
+import { Spell } from '../interfaces/spell';
 import { Observable, of } from 'rxjs';
 import { Injectable } from '@angular/core';
 

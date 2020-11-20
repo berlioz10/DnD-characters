@@ -1,0 +1,9 @@
+<div class="spell" *ngIf="spell">
+    <p>Name: {{spell.name}}</p>
+    <p>Damage: {{spell.damage}}</p>
+    <p>Mana cost: {{spell.mana_cost}}</p>
+    <p>Cooldown: {{spell.cooldown}} {{spell.cooldown_type}}</p>
+    <p></p>
+</div>
+
+<div *ngIf="!spell">There is no spell</div>

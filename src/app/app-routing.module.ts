@@ -1,5 +1,5 @@
-import { CharacterDetailComponent } from './character-detail/character-detail.component';
-import { CharactersComponent } from './characters/characters.component';
+import { CharacterDetailComponent } from './components/character-detail/character-detail.component';
+import { CharactersComponent } from './components/characters/characters.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 

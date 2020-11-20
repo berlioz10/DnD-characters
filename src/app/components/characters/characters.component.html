@@ -5,8 +5,10 @@
         <li class="characters_stats">Name: {{character.name}}</li>
         <li class="characters_stats">Race: {{character.race}}</li>
         <li class="characters_stats">Weapon: <weapon [id]="character.id_weapon"></weapon></li>
-        <li class="characters_stats">Armor: {{character.armor}}</li>
-        <li class="characters_stats">Spell: {{character.spell}}</li>
+        <li class="characters_stats">Armor: <armor [id]="character.id_armor"></armor> </li>
+        <li class="characters_stats">Spells: <div *ngFor="let id_spell of character.id_spell"> 
+        <spell [id]="id_spell"></spell> 
+        </div> </li>
         <button routerLink="/detail/{{character.id}}">Editeaza acest caracter</button>
     </ul>
 </div>

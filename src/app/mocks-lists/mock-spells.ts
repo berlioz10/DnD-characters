@@ -7,7 +7,7 @@ export const Spells: Spell[] = [
         damage: 10,
         mana_cost: 5,
         cooldown: 5,
-        cooldown_type: "turn",
+        cooldown_type: "turns",
         other: ""
     },
     {
@@ -16,7 +16,7 @@ export const Spells: Spell[] = [
         damage: 20,
         mana_cost: 10,
         cooldown: 3,
-        cooldown_type: "turn",
+        cooldown_type: "turns",
         other: ""
     },
     {
@@ -34,7 +34,7 @@ export const Spells: Spell[] = [
         damage: 10,
         mana_cost: 5,
         cooldown: 5,
-        cooldown_type: "turn/end of fight",
+        cooldown_type: "turns/end of fight",
         other: "using it, you will have 10 more damage than usual, and is not affected by ability damage. \n"
     }
 ]

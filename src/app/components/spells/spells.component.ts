@@ -1,5 +1,5 @@
-import { SpellsService } from './../services/spells.service';
-import { Spell } from './../interfaces/spell';
+import { SpellsService } from '../../services/spells.service';
+import { Spell } from '../../interfaces/spell';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({

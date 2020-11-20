@@ -1,7 +1,7 @@
 import { Observable, of } from 'rxjs';
 import { Weapons } from './../mocks-lists/mock-weapons';
 import { Injectable } from '@angular/core';
-import { Weapon } from './../interfaces/weapon';
+import { Weapon } from '../interfaces/weapon';
 
 @Injectable({
   providedIn: 'root'

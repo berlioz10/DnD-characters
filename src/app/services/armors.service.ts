@@ -1,5 +1,5 @@
 import { of, Observable } from 'rxjs';
-import { Armor } from './../interfaces/armor';
+import { Armor } from '../interfaces/armor';
 import { Armors } from './../mocks-lists/mock-armors';
 import { Injectable } from '@angular/core';
 

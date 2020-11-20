@@ -1,9 +1,9 @@
-import { Armor } from './../interfaces/armor';
-import { ArmorsService } from './../services/armors.service';
+import { Armor } from './../../interfaces/armor';
+import { ArmorsService } from './../../services/armors.service';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-armors',
+  selector: 'armor',
   templateUrl: './armors.component.html',
   styleUrls: ['./armors.component.css']
 })
