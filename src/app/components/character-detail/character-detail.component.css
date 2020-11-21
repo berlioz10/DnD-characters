@@ -1,10 +1,6 @@
-label {
+.add{
     width:80px;
-    clear:left;
-    padding-right:10px;
-    padding-bottom: 10px;
-}
-
-input, label, button {
-    float:left;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

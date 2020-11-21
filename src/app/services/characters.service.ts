@@ -17,4 +17,10 @@ export class CharactersService {
   getCharacter(id: number): Observable<Character> {
     return of(Characters.find(character => character.id === id));
   }
+
+  changeWeapon(character: Character, id_weapon: number): void {
+    let index = Characters.indexOf(character)
+
+    Characters[index].id_weapon = id_weapon
+  }
 }

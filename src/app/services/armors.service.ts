@@ -11,6 +11,10 @@ export class ArmorsService {
 
   constructor() { }
 
+  getArmors(): Observable<Armor[]> {
+    return of(Armors)
+  }
+
   getArmor(id: number): Observable<Armor> {
     return of(Armors.find(armor => armor.id == id))
   }

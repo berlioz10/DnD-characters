@@ -1,20 +1,40 @@
-<div *ngIf="character">
+<div *ngIf="characterValue">
     <h1>Character details: </h1>
-    <label for="input_name">name: </label>
-        <input id="input_name" [(ngModel)]="character.name" placeholder="name"/>
+    <p>Name: <input [(ngModel)]="characterValue.name" placeholder="name"/></p>
+        
+    <p>Race: <input [(ngModel)]="characterValue.race" placeholder="race"/></p>
     
-    <label for="input_race">race: </label>
-        <input id="input_race" [(ngModel)]="character.race" placeholder="name"/>
+    <div>Weapon: </div>
+    <weapon [id]="characterValue.id_weapon"> </weapon>
+    <br>
+    <button class="add" *ngIf="!weapons" (click)="getWeapons()">Change weapon</button>
+    <div *ngIf="weapons">
+        <div *ngFor="let weapon of weapons">
+            <button (click)="setWeapon(weapon.id); clearWeapons()">{{weapon.name}}</button>
+        </div>
+        <button (click)="setWeapon(0); clearWeapons()">None</button>
+    </div>
+
+    <div>Armor: </div>
+    <armor [id]="characterValue.id_armor"></armor>
+    <br>
+    <button class="add" *ngIf="!armors" (click)="getArmors()">Change armor</button>
+    <div *ngIf="armors">
+        <div *ngFor="let armor of armors">
+            <button (click)="setArmor(armor.id); clearArmors()">{{armor.name}}</button>
+        </div>
+        <button (click)="setArmor(0); clearArmors()">None</button>
+    </div>
+
+    <div>Spells: 
+        <div *ngFor="let id_spell of character.id_spell">
+            <spell [id]="id_spell"> </spell>
+        </div>
+    </div>
+    <button class="add">Change spells</button>
     
-    <label for="input_weapon">weapon: </label>
-        <input id="input_weapon" [(ngModel)]="character.weapon" placeholder="name"/>
-    
-    <label for="input_armor">armor: </label>
-        <input id="input_armor" [(ngModel)]="character.armor" placeholder="name"/>
-    
-    <label for="input_spell">spell: </label>
-        <input  id="input_spell" [(ngModel)]="character.spell" placeholder="name"/>
-    <label for="input_back"> </label>
-    <button id="input_back" (click)="goBack()"> Inapoi </button>
+    <br>
+
+    <button (click)="goBack()"> Inapoi </button>
 
 </div>
