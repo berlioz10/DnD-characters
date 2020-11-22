@@ -10,20 +10,20 @@
     <button class="add" *ngIf="!weapons" (click)="getWeapons()">Change weapon</button>
     <div *ngIf="weapons">
         <div *ngFor="let weapon of weapons">
-            <button (click)="setWeapon(weapon.id); clearWeapons()">{{weapon.name}}</button>
+            <button class="options" (click)="setWeapon(weapon.id); clearWeapons()">{{weapon.name}}</button>
         </div>
-        <button (click)="setWeapon(0); clearWeapons()">None</button>
+        <button class="options" (click)="setWeapon(0); clearWeapons()">None</button>
     </div>
 
     <div>Armor: </div>
-    <armor [id]="characterValue.id_armor"></armor>
+    <armor [id]="characterValue.id_armor"> </armor>
     <br>
     <button class="add" *ngIf="!armors" (click)="getArmors()">Change armor</button>
     <div *ngIf="armors">
         <div *ngFor="let armor of armors">
-            <button (click)="setArmor(armor.id); clearArmors()">{{armor.name}}</button>
+            <button class="options" (click)="setArmor(armor.id); clearArmors()">{{armor.name}}</button>
         </div>
-        <button (click)="setArmor(0); clearArmors()">None</button>
+        <button class="options" (click)="setArmor(0); clearArmors()">None</button>
     </div>
 
     <div>Spells: 
@@ -31,7 +31,8 @@
             <spell [id]="id_spell"> </spell>
         </div>
     </div>
-    <button class="add">Change spells</button>
+    <button class="add">Remove spells</button>
+    <button class="add">Add spells</button>
     
     <br>
 

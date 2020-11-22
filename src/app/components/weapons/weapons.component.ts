@@ -1,6 +1,6 @@
 import { WeaponsService } from './../../services/weapons.service';
 import { Weapon } from '../../interfaces/weapon';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 
 
 @Component({
@@ -8,22 +8,23 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './weapons.component.html',
   styleUrls: ['./weapons.component.css']
 })
-export class WeaponsComponent implements OnInit {
+export class WeaponsComponent implements OnChanges, OnInit {
 
   @Input() id: number;
   weapon: Weapon;
 
-  constructor(private weaponService: WeaponsService) { }
-
-  ngOnInit(): void {
-    this.getWeapon(this.id);
-  }
+  constructor(public weaponsService: WeaponsService) { }
   
+  ngOnInit(): void {
+    this.weaponsService.weapon$.subscribe( weapon => this.weapon = weapon)
+    this.getWeapon(this.id)
+  }
+
   ngOnChanges(): void {
     this.getWeapon(this.id)
   }
 
   getWeapon(id: number): void {
-    this.weaponService.getWeapon(id).subscribe(weapon => this.weapon = weapon)
+    this.weaponsService.getWeapon(id);
   }
 }

@@ -51,7 +51,8 @@ export class CharacterDetailComponent implements OnInit {
   }
 
   getWeapons(): void {
-    this.weaponsService.getWeapons().subscribe(weapons => this.weapons = weapons);
+    var observable = this.weaponsService.getWeapons().subscribe(weapons => this.weapons = weapons);
+    observable.unsubscribe()
   }
 
   setWeapon(id_weapon: number): void {
@@ -63,7 +64,8 @@ export class CharacterDetailComponent implements OnInit {
   }
 
   getArmors(): void {
-    this.armorsService.getArmors().subscribe(armors => this.armors = armors);
+    var observable = this.armorsService.openArmors().subscribe(armors => this.armors = armors);
+    observable.unsubscribe()
   }
 
   setArmor(id_armor: number): void {
@@ -75,7 +77,8 @@ export class CharacterDetailComponent implements OnInit {
   }
 
   getSpells(): void {
-    this.spellsService.getSpells().subscribe(spells => this.spells = spells);
+    var observable = this.spellsService.getSpells().subscribe(spells => this.spells = spells);
+    observable.unsubscribe()
   }
 
   clearSpells(): void {

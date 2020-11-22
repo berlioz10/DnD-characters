@@ -20,7 +20,8 @@ export class CharactersComponent implements OnInit {
   }
 
   getCharacters(): void {
-    this.CharactersService.getCharacters().subscribe(characters => this.characters = characters);
+    var observable = this.CharactersService.getCharacters().subscribe(characters => this.characters = characters);
+    observable.unsubscribe()
   }
 
 }
