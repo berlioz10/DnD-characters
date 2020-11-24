@@ -12,3 +12,17 @@
     resize: horizontal;
     text-align: right;
 }
+
+.button {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.bar {
+    border: 1px black solid;
+    background-color: grey;
+    width: 200px;
+    height: 20px;
+    position: relative;
+    float: right;
+}

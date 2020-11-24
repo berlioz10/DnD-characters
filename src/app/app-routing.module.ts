@@ -5,7 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {path: 'characters', component: CharactersComponent },
-  {path: 'detail/:id', component: CharacterDetailComponent }
+  {path: 'detail/:id', component: CharacterDetailComponent },
+  {path: '', redirectTo: '/characters', pathMatch: 'full'}
 ];
 
 @NgModule({
