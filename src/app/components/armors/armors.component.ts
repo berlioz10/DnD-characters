@@ -14,7 +14,6 @@ export class ArmorsComponent implements OnInit, OnChanges {
   constructor(private armorsService: ArmorsService) { }
 
   ngOnInit(): void {
-    this.armorsService.armor$.subscribe(armor => this.armor = armor)
     this.getArmor(this.id)
   }
 
@@ -23,7 +22,8 @@ export class ArmorsComponent implements OnInit, OnChanges {
   }
 
   getArmor(id: number): void {
-    this.armorsService.getArmor(id)
+    let observable = this.armorsService.getArmor(id).subscribe(armor => this.armor = armor)
+    observable.unsubscribe()
   }
 
 }

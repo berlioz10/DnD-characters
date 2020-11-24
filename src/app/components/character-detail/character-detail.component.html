@@ -27,12 +27,24 @@
     </div>
 
     <div>Spells: 
-        <div *ngFor="let id_spell of character.id_spell">
+        <div *ngFor="let id_spell of characterValue.id_spell">
             <spell [id]="id_spell"> </spell>
         </div>
+        <div *ngIf="characterValue.id_spell.length == 0">There are no spells</div>
     </div>
-    <button class="add">Remove spells</button>
-    <button class="add">Add spells</button>
+    <button class="add" (click)="clearSpells(); getOtherSpells();" *ngIf="!otherSpells">Add spells</button>
+    <div *ngIf="otherSpells">
+        <div *ngFor="let spell of otherSpells">
+            <button class="options" (click)="addSpell(spell.id); clearSpells()">{{spell.name}}</button>
+        </div>
+    </div>
+    <br>
+    <button class="add" (click)="clearSpells(); getYourSpells();" *ngIf="!yourSpells">Remove spells</button>
+    <div *ngIf="yourSpells">
+        <div *ngFor="let spell of yourSpells">
+            <button class="options" (click)="removeSpell(spell.id); clearSpells()">{{spell.name}}</button>
+        </div>
+    </div>
     
     <br>
 

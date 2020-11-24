@@ -10,6 +10,7 @@ import { CharactersService } from './../../services/characters.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { ThrowStmt } from '@angular/compiler';
 
 
 @Component({
@@ -22,7 +23,17 @@ export class CharacterDetailComponent implements OnInit {
   private character: Character;
   weapons: Weapon[];
   armors: Armor[];
+  yourSpells: Spell[];
+  otherSpells: Spell[];
   spells: Spell[];
+
+  get characterValue() {
+    return this.character
+  }
+
+  set characterValue(character: Character) {
+    this.character = character
+  }
 
   constructor(private charactersService: CharactersService,
               private weaponsService: WeaponsService,
@@ -40,14 +51,6 @@ export class CharacterDetailComponent implements OnInit {
   getCharacter(): void {
     const id = +this.route.snapshot.paramMap.get("id");
     this.charactersService.getCharacter(id).subscribe(character => this.characterValue = character);
-  }
-
-  get characterValue() {
-    return this.character
-  }
-
-  set characterValue(character: Character) {
-    this.character = character
   }
 
   getWeapons(): void {
@@ -76,21 +79,39 @@ export class CharacterDetailComponent implements OnInit {
     this.armors = null;
   }
 
-  getSpells(): void {
-    var observable = this.spellsService.getSpells().subscribe(spells => this.spells = spells);
+  getOtherSpells(): void {
+    var observable = this.spellsService.getSpells().subscribe(spells => this.otherSpells = spells);
+    observable.unsubscribe()
+  }
+
+  getYourSpells(): void{
+    var observable = this.spellsService.getSpells().subscribe(spells => this.yourSpells = spells);
     observable.unsubscribe()
   }
 
   clearSpells(): void {
-    this.spells = null;
+    this.yourSpells = null;
+    this.otherSpells = null;
   }
 
-  addSpell(): void {
-
+  addSpell(id: number): void {
+    if (this.characterValue.id_spell.indexOf(id) != -1) {
+      console.error("Already exists");
+    }
+    else {
+      this.characterValue.id_spell.push(id)
+    }
   }
 
-  removeSpell(): void {
-
+  removeSpell(id: number): void {
+    let index = this.characterValue.id_spell.indexOf(id)
+    if(index == -1) {
+      console.error("Doesn't exist");
+    }
+    else {
+      this.characterValue.id_spell.splice(index, 1)
+      console.log(this.characterValue.id_spell)
+    }
   }
 
   goBack(): void {

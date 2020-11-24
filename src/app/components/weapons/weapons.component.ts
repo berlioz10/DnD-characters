@@ -16,7 +16,6 @@ export class WeaponsComponent implements OnChanges, OnInit {
   constructor(public weaponsService: WeaponsService) { }
   
   ngOnInit(): void {
-    this.weaponsService.weapon$.subscribe( weapon => this.weapon = weapon)
     this.getWeapon(this.id)
   }
 
@@ -25,6 +24,6 @@ export class WeaponsComponent implements OnChanges, OnInit {
   }
 
   getWeapon(id: number): void {
-    this.weaponsService.getWeapon(id);
+    this.weaponsService.getWeapon(id).subscribe(weapon => this.weapon = weapon);
   }
 }

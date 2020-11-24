@@ -8,15 +8,13 @@ import { Weapon } from '../interfaces/weapon';
 })
 export class WeaponsService {
 
-  constructor() { }
-
-  public weapon$ = new Subject<Weapon>() 
+  constructor() { } 
 
   getWeapons(): Observable<Weapon[]> {
     return of(Weapons);
   }
   
-  getWeapon(id: number): void {
-    this.weapon$.next(Weapons.find(weapon => weapon.id === id));
+  getWeapon(id: number): Observable<Weapon> {
+    return of(Weapons.find(weapon => weapon.id === id))
   }
 }
