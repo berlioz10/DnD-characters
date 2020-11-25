@@ -7,7 +7,7 @@ import { SpellsService } from './../../services/spells.service';
 import { ArmorsService } from './../../services/armors.service';
 import { WeaponsService } from './../../services/weapons.service';
 import { CharactersService } from './../../services/characters.service';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { ThrowStmt } from '@angular/compiler';
@@ -26,6 +26,14 @@ export class CharacterDetailComponent implements OnInit {
   yourSpells: Spell[];
   otherSpells: Spell[];
   spells: Spell[];
+
+  @HostListener('window:popstate', ['$event'])
+  onPopState(event) {
+    if (this.characterValue.hp > this.characterValue.max_hp) 
+      this.characterValue.hp = this.characterValue.max_hp;
+    if (this.characterValue.mp > this.characterValue.max_mp)
+      this.characterValue.mp = this.characterValue.max_mp;
+  }
 
   get characterValue() {
     return this.character
@@ -115,6 +123,10 @@ export class CharacterDetailComponent implements OnInit {
   }
 
   goBack(): void {
+    if (this.characterValue.hp > this.characterValue.max_hp) 
+      this.characterValue.hp = this.characterValue.max_hp;
+    if (this.characterValue.mp > this.characterValue.max_mp)
+      this.characterValue.mp = this.characterValue.max_mp;
     this.location.back();
   }
 }

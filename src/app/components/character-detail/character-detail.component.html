@@ -3,7 +3,8 @@
     <p>Name: <input [(ngModel)]="characterValue.name" placeholder="name"/></p>
         
     <p>Race: <input [(ngModel)]="characterValue.race" placeholder="race"/></p>
-    
+    <p>Health bar maximum: <input type="number" min="0" max="1000" [(ngModel)]="characterValue.max_hp"></p>
+    <p>Mana bar maximum: <input type="number" min="0" max="1000" [(ngModel)]="characterValue.max_mp"> </p>
     <div>Weapon: </div>
     <weapon [id]="characterValue.id_weapon"> </weapon>
     <br>
