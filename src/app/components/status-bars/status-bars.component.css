@@ -1,0 +1,45 @@
+.bar {
+    border: 1px black solid;
+    border-radius: 3px;
+    background-color: grey;
+    width: 200px;
+    height: 20px;
+    display: inline-block;
+    margin-top: 0px;
+}
+div.healthBar {
+    height: 20px;
+    background-color: tomato;
+    float: left;
+    text-align: center;
+}
+
+div.manaBar {
+    width: var(--widthMana);
+    height: 20px;
+    background-color: blue;
+    float: left;
+    text-align: center;
+}
+
+.addButton {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    vertical-align:top;
+    font-size: large;
+}
+
+.reduceButton {
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    vertical-align:top;
+    font-size: large;
+}

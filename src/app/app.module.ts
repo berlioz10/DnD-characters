@@ -10,6 +10,7 @@ import { CharacterDetailComponent } from './components/character-detail/characte
 import { WeaponsComponent } from './components/weapons/weapons.component';
 import { ArmorsComponent } from './components/armors/armors.component';
 import { SpellsComponent } from './components/spells/spells.component';
+import { StatusBarsComponent } from './components/status-bars/status-bars.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SpellsComponent } from './components/spells/spells.component';
     CharacterDetailComponent,
     WeaponsComponent,
     ArmorsComponent,
-    SpellsComponent
+    SpellsComponent,
+    StatusBarsComponent
   ],
   imports: [
     BrowserModule,

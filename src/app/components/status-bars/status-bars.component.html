@@ -1,0 +1,11 @@
+<div *ngIf="character">HP:
+    <button class="reduceButton" (click)="removeHealth()">-</button> 
+<div class="bar"> <div class="healthBar" [ngStyle]="{'width': hp_bar}">{{character.hp}}</div> </div> 
+    <button class="addButton" (click)="addHealth()">+</button> 
+</div>
+
+<div>MP:
+    <button class="reduceButton" (click)="removeMana()">-</button> 
+        <div class="bar"> <div class="manaBar" [ngStyle]="{'width': mp_bar}">{{character.mp}}</div> </div> 
+    <button class="addButton" (click)="addMana()">+</button>
+</div>

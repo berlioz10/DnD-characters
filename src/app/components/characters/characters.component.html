@@ -2,21 +2,22 @@
     <h1> Your characters: </h1>
     <ul class="characters_box" *ngFor="let character of characters">
         <li class="characters_stats">Name: {{character.name}}</li>
-        <li class="characters_stats">HP: <div class="bar"></div> </li>
-        <li class="characters_stats">MP: <div class="bar"></div> </li>
+
+        <li class="characters_stats">Stats: <status-bars [character]="character"></status-bars></li>
+
         <li class="characters_stats">Race: {{character.race}}</li>
         <li class="characters_stats">Weapon: <weapon [id]="character.id_weapon"></weapon></li>
         <li class="characters_stats">Armor: <armor [id]="character.id_armor"></armor> </li>
         <li class="characters_stats">Spells: <div *ngFor="let id_spell of character.id_spell"> 
         <spell [id]="id_spell"></spell>
         </div> <div *ngIf="character.id_spell.length == 0"> There are no spells </div> </li>
-        <button class="button" routerLink="/detail/{{character.id}}">Editeaza acest caracter</button>
-        <button class="button" (click)="deleteCharacters(character)">Sterge acest caracter</button>
+        <button class="charactersButtons" routerLink="/detail/{{character.id}}">Editeaza acest caracter</button>
+        <button class="charactersButtons" (click)="deleteCharacters(character)">Sterge acest caracter</button>
     </ul>
 </div>
 
 <p *ngIf="characters.length == 0">Nu exista caractere..</p>
 
 <div> 
-    <button class="button" (click)="addCharacter()" routerLink="/detail/{{new_id}}">Adauga un caracter</button>
+    <button class="charactersButtons" (click)="addCharacter()" routerLink="/detail/{{new_id}}">Adauga un caracter</button>
 </div>

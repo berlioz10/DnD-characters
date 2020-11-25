@@ -1,3 +1,8 @@
+body {
+    --widthHealth: 200px;
+    --widthMana: 200px;
+}
+
 .characters_box {
     padding: 25px;
     border: 5px solid black;
@@ -6,23 +11,13 @@
 
 .characters_stats {
     padding: 5px 5px 5px 5px;
-    margin: 5px;
+    margin: 5px; 
     border: 1px solid black;
     font-size: large;
-    resize: horizontal;
     text-align: right;
 }
 
-.button {
+.charactersButtons {
     margin-left: 15px;
     margin-right: 15px;
-}
-
-.bar {
-    border: 1px black solid;
-    background-color: grey;
-    width: 200px;
-    height: 20px;
-    position: relative;
-    float: right;
 }

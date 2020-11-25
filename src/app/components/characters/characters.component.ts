@@ -1,4 +1,3 @@
-import { Weapons } from './../../mocks-lists/mock-weapons';
 import { Character } from './../../interfaces/character';
 import { CharactersService } from './../../services/characters.service';
 import { Component, OnInit } from '@angular/core';
