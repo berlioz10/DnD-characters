@@ -9,3 +9,10 @@
         <div class="bar"> <div class="manaBar" [ngStyle]="{'width': mp_bar}">{{character.mp}}</div> </div> 
     <button class="addButton" (click)="addMana()">+</button>
 </div>
+
+<div>Money:
+    <button class="reduceButton" (click)="removeMoney()">-</button>
+    <img src="assets/money.png" class="sizeImage" alt="Bag of money">
+    <div type="number" min="0" class="moneyBox">{{character.money}}</div>
+    <button class="addButton" (click)="addMoney()">+</button>
+</div>

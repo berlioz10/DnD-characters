@@ -10,7 +10,6 @@ import { CharactersService } from './../../services/characters.service';
 import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { ThrowStmt } from '@angular/compiler';
 
 
 @Component({

@@ -43,3 +43,19 @@ div.manaBar {
     vertical-align:top;
     font-size: large;
 }
+
+.sizeImage {
+    height: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.moneyBox {
+    display: inline-block;
+    height: 20px;
+    width: 171px;
+    vertical-align: top;
+    border: black 1px solid;
+    border-radius: 5px;
+    text-align: center;
+}

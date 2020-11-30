@@ -46,4 +46,14 @@ export class StatusBarsComponent implements OnInit {
       this.mp_bar = 200 / this.character.max_mp * this.character.mp + "px"
     }
   }
+
+  removeMoney(): void {
+    if(this.character.money > 0) {
+      this.character.money -= 1;
+    }
+  }
+
+  addMoney(): void {
+    this.character.money += 1;
+  }
 }

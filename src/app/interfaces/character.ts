@@ -4,6 +4,7 @@ export interface Character {
     hp: number;
     max_mp: number;
     mp: number;
+    money: number;
     name: string;
     race: string;
     id_weapon: number;

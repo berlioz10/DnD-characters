@@ -37,6 +37,7 @@ export class CharactersComponent implements OnInit {
       hp: 0,
       max_mp: 0,
       mp: 0,
+      money: 10,
       name: "",
       race: "",
       id_weapon: 0,
