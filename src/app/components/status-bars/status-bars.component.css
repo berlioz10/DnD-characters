@@ -59,3 +59,10 @@ div.manaBar {
     border-radius: 5px;
     text-align: center;
 }
+
+.textAlign {
+    vertical-align: top;
+    margin-top: 0px;
+    padding-top: 0px;
+    white-space: nowrap;
+}
